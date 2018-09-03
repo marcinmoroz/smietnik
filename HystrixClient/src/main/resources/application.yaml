@@ -3,3 +3,4 @@ server.port=8090
 spring.application.name=hystrixClient
 
 server.tomcat.max-threads=30
+customer.contractsUri="localhost:8091/contracts"
