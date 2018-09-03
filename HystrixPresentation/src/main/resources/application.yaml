@@ -1,0 +1,5 @@
+server.servlet.context-path=/hystrixClient
+server.port=8090
+spring.application.name=hystrixClient
+
+server.tomcat.max-threads=30
