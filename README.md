@@ -1,0 +1,2 @@
+# smietnik
+rozne takie
