@@ -23,6 +23,9 @@ public class CustomerServiceV1 {
     @Value("${customer.contractsUri}")
     private String customerContractsUri;
 
+    @Value("${customer.invoicesUri}")
+    private String customerInvoicesUri;
+
     public String greeting(String username) throws InterruptedException {
         TimeUnit.MILLISECONDS.sleep(waitTimeMilliseconds);
         return String.format("Hello customer %s!", username);

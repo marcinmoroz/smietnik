@@ -1,3 +1,5 @@
-server.servlet.context-path=/CustomerContracts
-server.port=8092
-spring.application.name=CustomerContracts
+server:
+  servlet.context-path: /CustomerInvoices
+  port: 8092
+
+spring.application.name: CustomerInvoices

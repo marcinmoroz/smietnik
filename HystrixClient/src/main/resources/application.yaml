@@ -1,6 +1,10 @@
-server.servlet.context-path=/hystrixClient
-server.port=8090
-spring.application.name=hystrixClient
+server:
+  port: 8090
+  servlet.context-path: /hystrixClient
+  tomcat.max-threads: 30
 
-server.tomcat.max-threads=30
-customer.contractsUri="localhost:8091/contracts"
+spring.application.name: hystrixClient
+
+customer:
+  contractsUri: 'localhost:8091/CustomerContracts/{userId}/getCustomerContracts'
+  invoicesUri:  'localhost:8092/CustomerInvoices/{userId}/getCustomerInvoices'
