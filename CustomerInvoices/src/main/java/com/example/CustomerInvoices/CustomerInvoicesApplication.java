@@ -1,4 +1,4 @@
-package com.example.CustomerContracts;
+package com.example.CustomerInvoices;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,10 +10,10 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
 @PropertySource("classpath:/application.yaml")
-public class CustomerContractsApplication {
+public class CustomerInvoicesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CustomerContractsApplication.class, args);
+		SpringApplication.run(CustomerInvoicesApplication.class, args);
 	}
 
 	@Bean

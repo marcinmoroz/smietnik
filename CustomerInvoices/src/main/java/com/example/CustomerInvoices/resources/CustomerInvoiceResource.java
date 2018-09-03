@@ -1,4 +1,4 @@
-package com.example.CustomerContracts.resources;
+package com.example.CustomerInvoices.resources;
 import lombok.extern.log4j.Log4j2;
 import lombok.var;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,14 +11,14 @@ import java.util.concurrent.TimeUnit;
 
 @Log4j2
 @RestController
-public class CustomerContractResource  {
+public class CustomerInvoiceResource  {
 
     public static Integer waitTimeMilliseconds = 1000;
 
-    @GetMapping("/{userId}/getCustomerContracts")
-    public List<String> getCustomerContracts(@PathVariable("userId") Integer userId) throws InterruptedException {
+    @GetMapping("/{userId}/getCustomerInvoices")
+    public List<String> getCustomerInvoices(Integer userId) throws InterruptedException {
         TimeUnit.MILLISECONDS.sleep(waitTimeMilliseconds);
-        var contracts = new ArrayList<String>() {{ add("Contract1");add("Contract2");add("Contract3");}};
-        return contracts;
+        var invoices  =new ArrayList<String>() {{ add("Invoice F1/01/2018");add("Invoice F1/02/2018");add("Invoice F1/02/2018");}};
+        return invoices;
     }
 }

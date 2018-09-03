@@ -1,4 +1,4 @@
-package com.example.CustomerContracts;
+package com.example.CustomerInvoices;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
