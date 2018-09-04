@@ -27,8 +27,8 @@ public class HystrixClientApplication {
 	@Bean
 	public RestTemplate restTemplate() {
 		PoolingHttpClientConnectionManager manager = new PoolingHttpClientConnectionManager();
-		manager.setDefaultMaxPerRoute(30);
-		manager.setMaxTotal(100);
+		manager.setDefaultMaxPerRoute(20);
+		manager.setMaxTotal(200);
 		HttpClient client = HttpClients.custom()
 				.setConnectionManager(manager)
 				.disableCookieManagement()

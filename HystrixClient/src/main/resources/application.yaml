@@ -1,7 +1,7 @@
 server:
   port: 8090
   servlet.context-path: /HystrixClient
-  tomcat.max-threads: 100
+  tomcat.max-threads: 300
 
 spring.application.name: HystrixClient
 
@@ -12,7 +12,13 @@ customer:
 
 hystrix:
   threadpool.default:
-    coreSize: 200
+    coreSize: 120
+  threadpool.CustomerInvoices:
+    coreSize: 30
+  threadpool.CustomerContracts:
+    coreSize: 30
+  threadpool.Customers:
+    coreSize: 30
   command.default:
     execution.isolation.thread.timeoutInMilliseconds: 20000
     circuitBreaker.errorThresholdPercentage : 20
