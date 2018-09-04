@@ -1,9 +1,9 @@
 server:
   port: 8090
-  servlet.context-path: /hystrixClient
+  servlet.context-path: /HystrixClient
   tomcat.max-threads: 100
 
-spring.application.name: hystrixClient
+spring.application.name: HystrixClient
 
 customer:
   contractsUri: 'http://localhost:8091/CustomerContracts/{userId}/getCustomerContracts'
@@ -12,8 +12,9 @@ customer:
 
 hystrix:
   threadpool.default:
-    coreSize: 100
+    coreSize: 200
   command.default:
-    execution.isolation.thread.timeoutInMilliseconds: 120000
+    execution.isolation.thread.timeoutInMilliseconds: 20000
+    circuitBreaker.errorThresholdPercentage : 20
 
 management.endpoints.web.exposure.include: hystrix.stream, info, health
